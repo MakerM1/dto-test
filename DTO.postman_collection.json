@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "2eefa3b0-c05e-46f8-a575-150a4c77cd3b",
+		"name": "DTO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35083761"
+	},
+	"item": [
+		{
+			"name": "meetings",
+			"item": [
+				{
+					"name": "Make a new meeting",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"meeting\",\r\n    \"date\": \"2024-05-27T07:06:53.00\",\r\n    \"mentor\": {\r\n        \"firstName\": \"Misha\",\r\n        \"lastName\": \"Pailodze\",\r\n        \"email\": \"example@gmail.com\",\r\n        \"age\": 40,\r\n        \"phone\": \"+995446671969\",\r\n        \"gender\": \"male\"\r\n    },\r\n    \"students\": [\r\n        {\r\n            \"firstName\": \"Mika\",\r\n            \"lastName\": \"Tabatadze\",\r\n            \"email\": \"example@gmail.com\",\r\n            \"age\": 16,\r\n            \"phone\": \"+995446671969\",\r\n            \"gender\": \"male\"\r\n        },\r\n        {\r\n            \"firstName\": \"Maria\",\r\n            \"lastName\": \"White\",\r\n            \"email\": \"example@gmail.com\",\r\n            \"age\": 21,\r\n            \"phone\": \"+995446671969\",\r\n            \"gender\": \"female\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/meeting",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"meeting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update meeting",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"updated meeting\",\r\n    \"date\": \"2024-05-27T07:06:53.00\",\r\n    \"mentor\": {\r\n        \"firstName\": \"Gio\",\r\n        \"lastName\": \"Andriadze\",\r\n        \"email\": \"example@gmail.com\",\r\n        \"age\": 40,\r\n        \"phone\": \"+995446671969\",\r\n        \"gender\": \"male\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/meeting/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"meeting",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Mika\",\r\n    \"lastName\": \"Tabatadze\",\r\n    \"email\": \"example@gmail.com\",\r\n    \"age\": 17,\r\n    \"phone\": \"+995446671969\",\r\n    \"gender\": \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "Create user",
+							"host": [
+								"Create user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update existing user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Mike\",\r\n    \"lastName\": \"Black\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Add product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"lorem\",\r\n    \"price\": 200,\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet tincidunt sem, sit amet viverra justo porttitor eu. Proin placerat finibus tortor eu feugiat. Nullam malesuada porta pulvinar. Proin vehicula volutpat porta. Praesent at lorem ac ex aliquam suscipit. Quisque ultrices pulvinar mollis. Morbi non pharetra ex. Suspendisse at ex quis felis vestibulum ultricies. Sed ac dui est. Mauris laoreet venenatis massa. Nam semper est at ligula vulputate porttitor. Fusce feugiat dui at massa varius, consequat ultrices purus iaculis.\",\r\n    \"colors\": [\"red\", \"blue\"],\r\n    \"image\": \"https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update existing product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Ipsum\",\r\n    \"price\": 100,\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet tincidunt sem, sit amet viverra justo porttitor eu. Proin placerat finibus tortor eu feugiat. Nullam malesuada porta pulvinar. Proin vehicula volutpat porta. Praesent at lorem ac ex aliquam suscipit. Quisque ultrices pulvinar mollis. Morbi non pharetra ex. Suspendisse at ex quis felis vestibulum ultricies. Sed ac dui est. Mauris laoreet venenatis massa. Nam semper est at ligula vulputate porttitor. Fusce feugiat dui at massa varius, consequat ultrices purus iaculis.\",\r\n    \"colors\": [\"red\", \"blue\", \"gray\"],\r\n    \"image\": \"https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
